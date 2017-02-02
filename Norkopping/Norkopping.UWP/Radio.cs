@@ -12,7 +12,7 @@ namespace Norkopping.UWP
         public static void Init()
         {
             Player = new MediaPlayer();
-            Player.Source = MediaSource.CreateFromUri(new Uri("http://media.vmariel.ru:8000/puls"));
+            Player.Source = MediaSource.CreateFromUri(new Uri("http://198.58.106.133/proxy/dougwsjf?mp=/"));
         }
 
         public static void Start()
