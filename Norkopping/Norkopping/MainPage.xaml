@@ -5,7 +5,7 @@
              x:Class="Norkopping.MainPage">
     <ContentPage.Content>
       <StackLayout BackgroundColor="#003263" Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-          <local:PlayButton Text="PLAY" BackgroundColor="White" TextColor="Black"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+          <local:PlayButton Text="PLAY" WidthRequest="75" BackgroundColor="White" TextColor="Black"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
       </StackLayout>
     </ContentPage.Content>
 </ContentPage>

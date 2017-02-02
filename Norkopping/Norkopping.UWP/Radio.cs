@@ -12,7 +12,7 @@ namespace Norkopping.UWP
         public static void Init()
         {
             Player = new MediaPlayer();
-            Player.Source = MediaSource.CreateFromUri(new Uri("http://198.58.106.133/proxy/dougwsjf?mp=/"));
+            Player.Source = MediaSource.CreateFromUri(new Uri("http://us1.internet-radio.com:8105/"));
         }
 
         public static void Start()

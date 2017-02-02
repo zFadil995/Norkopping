@@ -10,7 +10,7 @@ namespace Norkopping.Droid
         {
             Player = new MediaPlayer();
             Player.SetAudioStreamType(Stream.Music);
-            Player.SetDataSource("http://198.58.106.133/proxy/dougwsjf?mp=/");
+            Player.SetDataSource("http://198.58.106.133/proxy/dougwsjf?mp=");
             Player.Prepare();
         }
 
