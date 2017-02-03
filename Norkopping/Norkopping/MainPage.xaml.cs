@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using RestSharp.Portable;
+using RestSharp.Portable.Content;
 using RestSharp.Portable.HttpClient;
 using Xamarin.Forms;
 
@@ -12,7 +13,7 @@ namespace Norkopping
         public MainPage()
         {
             InitializeComponent();
-            loadInfo();
+            getInfo();
         }
 
         private async void loadData() {
@@ -25,24 +26,18 @@ namespace Norkopping
 
         private async void getInfo()
         {
-            var client = new RestClient("http://us1.internet-radio.com:8105/");
+            var client = new RestClient("http://us1.internet-radio.com:8105/index.html");
             var request = new RestRequest(Method.GET);
-            request.AddHeader("cache-control", "no-cache");
-            var response = await client.Execute(request);
+            request.AddHeader("Content-Type", "text/html");
+
             try
             {
-                string data = response.Content;
+                var response = client.GetContent(request, null);
+                string data = response.ToString();
             }
             catch (Exception e)
             {
             }
-        }
-        private async void loadInfo()
-        {
-            var client = new RestClient("http://ubuntucodenest.cloudapp.net/banking/account.php");
-            var request = new RestRequest(Method.GET);
-            var response = await client.Execute(request);
-                string data = response.Content;
         }
     }
 }
