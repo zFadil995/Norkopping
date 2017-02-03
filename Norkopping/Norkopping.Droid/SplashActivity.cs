@@ -22,7 +22,6 @@ namespace Norkopping.Droid
             Window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
             Window.SetStatusBarColor(Android.Graphics.Color.ParseColor("#003263"));
             Window.SetNavigationBarColor(Android.Graphics.Color.ParseColor("#003263"));
-            Radio.Init();
             // Create your application here
         }
 

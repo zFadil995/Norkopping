@@ -20,7 +20,6 @@ namespace Norkopping.UWP
     {
         public MainPage()
         {
-            Radio.Init();
 
             this.InitializeComponent();
 

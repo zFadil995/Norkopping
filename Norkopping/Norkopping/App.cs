@@ -7,7 +7,7 @@ namespace Norkopping
     {
         public App()
         {
-            MainPage = new NavigationPage(new MainPage() {Title = "Norkopping"}) {BarBackgroundColor = Color.FromHex("#003263")};
+            MainPage = new NavigationPage(new MainPage() {Title = "Norkopping"}) {BarBackgroundColor = Color.FromHex("#003263"), BarTextColor = Color.White};
         }
 
         protected override void OnStart()

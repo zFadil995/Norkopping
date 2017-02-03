@@ -17,12 +17,14 @@ namespace Norkopping.UWP
 
         public static void Start()
         {
+            Init();
             Player.Play();
         }
 
         public static void Stop()
         {
             Player.Pause();
+            Player.Dispose();
         }
     }
 }
