@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using Norkopping;
 using Norkopping.iOS;
@@ -25,8 +26,14 @@ namespace Norkopping.iOS
 
                     if (Control.CurrentTitle == "PLAY")
                     {
-                        Radio.Start();
-                        Control.SetTitle("STOP", UIControlState.Normal);
+                        try
+                        {
+                            Radio.Start();
+                            Control.SetTitle("STOP", UIControlState.Normal);
+                        }
+                        catch (Exception ex)
+                        {
+                        }
                     }
                     else if (Control.CurrentTitle == "STOP")
                     {

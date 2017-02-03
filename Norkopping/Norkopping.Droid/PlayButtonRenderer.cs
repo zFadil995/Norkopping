@@ -26,8 +26,14 @@ namespace Norkopping.Droid
             Control.Enabled = false;
             if (Control.Text == "PLAY")
             {
-                Radio.Start();
-                Control.Text = "STOP";
+                try
+                {
+                    Radio.Start();
+                    Control.Text = "STOP";
+                }
+                catch (Exception ex)
+                {
+                }
             }
             else if (Control.Text == "STOP")
             {

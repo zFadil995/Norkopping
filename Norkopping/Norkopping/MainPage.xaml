@@ -6,7 +6,7 @@
     <ContentPage.Content>
       <StackLayout BackgroundColor="#003263" Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
           <local:PlayButton Text="PLAY" WidthRequest="75" BackgroundColor="White" TextColor="Black"  VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand"/>
-           <Label x:Name="songName" Text="HTML, hopefully!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="White" />
+           <Label x:Name="songName" Text="" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="White" />
       </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -14,11 +14,11 @@ namespace Norkopping
         public MainPage()
         {
             InitializeComponent();
-            updateSongInfo();
-            getInfo();
+            UpdateSongInfo();
+            GetInfo();
         }
 
-        private async void updateSongInfo()
+        private async void UpdateSongInfo()
         {
             var client = new RestClient("http://us1.internet-radio.com:8105/index.html");
             client.UserAgent =
@@ -39,12 +39,13 @@ namespace Norkopping
                 }
                 catch (Exception e)
                 {
+                    songName.Text = "No internet connection!";
                 }
                 Task.Delay(5000);
             }
         }
 
-        private async void getInfo()
+        private async void GetInfo()
         {
             var client = new RestClient("http://us1.internet-radio.com:8105/index.html");
             var request = new RestRequest(Method.GET);

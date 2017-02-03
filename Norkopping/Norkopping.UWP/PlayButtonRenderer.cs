@@ -1,4 +1,6 @@
-﻿using Norkopping;
+﻿using System;
+using System.Diagnostics;
+using Norkopping;
 using Norkopping.UWP;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.UWP;
@@ -19,8 +21,15 @@ namespace Norkopping.UWP
                     Control.IsEnabled = false;
                     if (Control.Content.ToString() == "PLAY")
                     {
-                        Radio.Start();
-                        Control.Content = "STOP";
+                        try
+                        {
+                            Radio.Start();
+                            Control.Content = "STOP";
+                        }
+                        catch (Exception ex)
+                        {
+                            Debug.WriteLine(ex.Message);
+                        }
                     }
                     else if (Control.Content.ToString() == "STOP")
                     {
